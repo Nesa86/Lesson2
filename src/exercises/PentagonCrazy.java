@@ -15,7 +15,7 @@ public class PentagonCrazy {
 
 		// 9. Set the pen to a color that you like for the shape
 
-		// 4. Make a variable for the number of sides you want (can’t test this one)
+		// 4. Make a variable for the number of sides you want (cant test this one)
 
 		// 5. Make a variable for the angle you want the robot to turn. Hint: you can divide in Java using "/". Can’t test until step 6.
 
@@ -38,5 +38,20 @@ public class PentagonCrazy {
 
 	public static void main(String[] args) {
 		new PentagonCrazy().makePrettyThings();
+		
+		Robot t2 = new Robot();
+		t2.penDown();
+		t2.setSpeed(30);
+		t2.setPenColor(Color.blue);
+		
+		int sides = 5;
+		int angle = 360/sides;
+		
+		
+		for (int i = 0; i < 200; i++) {
+			t2.move(i);
+			t2.turn(angle);
+		}
+		
 	}
 }
